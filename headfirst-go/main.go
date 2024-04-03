@@ -1,10 +1,7 @@
 package main
 
 import (
-	array "headfirst-go/datastructures"
-	"log"
-	"os"
-	"strconv"
+	"headfirst-go/maps"
 )
 
 func main() {
@@ -19,15 +16,18 @@ func main() {
 		if err != nil {
 			log.Fatal(err)
 		}
-	*/
-	numbers := make([]float64, 0)
-	arguments := os.Args[1:]
-	for _, argument := range arguments {
-		number, err := strconv.ParseFloat(argument, 64)
-		if err != nil {
-			log.Fatal(err)
+
+		numbers := make([]float64, 0)
+		arguments := os.Args[1:]
+		for _, argument := range arguments {
+			number, err := strconv.ParseFloat(argument, 64)
+			if err != nil {
+				log.Fatal(err)
+			}
+			numbers = append(numbers, number)
 		}
-		numbers = append(numbers, number)
-	}
-	array.Average(numbers...)
+		array.Average(numbers...)
+	*/
+	maps.Test()
+	maps.VoteCount()
 }
