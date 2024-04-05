@@ -1,8 +1,6 @@
 package main
 
-import (
-	"headfirst-go/maps"
-)
+import "headfirst-go/structs"
 
 func main() {
 	/*
@@ -16,7 +14,9 @@ func main() {
 		if err != nil {
 			log.Fatal(err)
 		}
+	*/
 
+	/*
 		numbers := make([]float64, 0)
 		arguments := os.Args[1:]
 		for _, argument := range arguments {
@@ -28,6 +28,12 @@ func main() {
 		}
 		array.Average(numbers...)
 	*/
-	maps.Test()
-	maps.VoteCount()
+
+	/*
+		maps.Test()
+		maps.VoteCount()
+		maps.OrderTest()
+	*/
+
+	structs.Test()
 }

@@ -28,5 +28,14 @@ func VoteCount() {
 	for _, line := range lines {
 		counts[line]++
 	}
-	fmt.Println(counts)
+	for candidate, votes := range counts {
+		fmt.Println(candidate, "got", votes, "votes")
+	}
+}
+
+func OrderTest() {
+	grades := map[string]float64{"Alma": 74.2, "Rohit": 86.5, "Carl": 59.7}
+	for student, grade := range grades {
+		fmt.Println(student, "'s grade is", grade)
+	}
 }
