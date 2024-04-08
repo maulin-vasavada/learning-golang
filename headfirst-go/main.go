@@ -1,6 +1,6 @@
 package main
 
-import "headfirst-go/structs"
+import mytypes "headfirst-go/definedtypes"
 
 func main() {
 	/*
@@ -35,5 +35,12 @@ func main() {
 		maps.OrderTest()
 	*/
 
-	structs.Test()
+	/*
+		structs.Test()
+	*/
+
+	mytypes.Test()
+	mytypes.LegalButIncorrectConversion()
+	mytypes.CorrectConversion()
+	mytypes.ConversionWithFuncs()
 }

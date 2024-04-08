@@ -2,10 +2,15 @@ package structs
 
 import "fmt"
 
-type subscriber struct {
+type Subscriber struct {
 	name   string
 	rate   float64
-	active bool
+	Active bool
+	Address
+}
+
+type Address struct {
+	Street, City, State, PostalCode string
 }
 
 type car struct {
@@ -13,27 +18,35 @@ type car struct {
 	topSpeed float64
 }
 
-func printSubscriber(s subscriber) {
+func printSubscriber(s Subscriber) {
 	fmt.Println("Name:", s.name)
 	fmt.Println("Rate:", s.rate)
-	fmt.Println("Active:", s.active)
+	fmt.Println("Active:", s.Active)
+	fmt.Println("Street:", s.Street)
+	fmt.Println("City:", s.City)
+	fmt.Println("State:", s.State)
+	fmt.Println("PostalCode:", s.PostalCode)
 
 }
 
-func applyDiscount(s *subscriber) {
+func applyDiscount(s *Subscriber) {
 	s.rate = 0.5 * s.rate
 }
 
 func Test() {
-	var subscriber1 subscriber
+	var subscriber1 Subscriber
 	subscriber1.name = "Aman Singh"
 	subscriber1.rate = 4.99
-	subscriber1.active = true
+	subscriber1.Active = true
+	subscriber1.Street = "221B Baker St"
+	subscriber1.City = "London"
+	subscriber1.State = "Secret"
+	subscriber1.PostalCode = "Secret"
 
-	var subscriber2 subscriber
+	var subscriber2 Subscriber
 	subscriber2.name = "Chaman Singh"
 	subscriber2.rate = 8.23
-	subscriber2.active = true
+	subscriber2.Active = true
 
 	printSubscriber(subscriber1)
 	applyDiscount(&subscriber1)
