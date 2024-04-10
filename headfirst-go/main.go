@@ -1,6 +1,6 @@
 package main
 
-import mytypes "headfirst-go/definedtypes"
+import "headfirst-go/interfaces"
 
 func main() {
 	/*
@@ -39,8 +39,38 @@ func main() {
 		structs.Test()
 	*/
 
-	mytypes.Test()
-	mytypes.LegalButIncorrectConversion()
-	mytypes.CorrectConversion()
-	mytypes.ConversionWithFuncs()
+	/*
+		mytypes.Test()
+		mytypes.LegalButIncorrectConversion()
+		mytypes.CorrectConversion()
+		mytypes.ConversionWithFuncs()
+	*/
+
+	/*
+		date := calendar.Date{}
+		err := date.SetYear(2019)
+		if err != nil {
+			log.Fatal(err)
+		}
+		fmt.Println(date.Year())
+
+		err = date.SetMonth(5)
+		if err != nil {
+			log.Fatal(err)
+		}
+		fmt.Println(date.Month())
+
+		err = date.SetDay(10)
+		if err != nil {
+			log.Fatal(err)
+		}
+		fmt.Println(date.Day())
+	*/
+
+	var toy interfaces.NoiseMaker
+	toy = interfaces.Honk("Toyco Blaster")
+	toy.MakeSound()
+	toy = interfaces.Whistle("Toyco Camry")
+	toy.MakeSound()
+	interfaces.Play(toy)
 }
