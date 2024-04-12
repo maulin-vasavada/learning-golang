@@ -1,6 +1,9 @@
 package main
 
-import "headfirst-go/channels"
+import (
+	"fmt"
+	"headfirst-go/prose"
+)
 
 func main() {
 	/*
@@ -76,7 +79,12 @@ func main() {
 		interfaces.Play(toy)
 	*/
 
-	channels.Test()
-	urls := []string{"https://example.com", "https://golang.org", "https://golang.org/doc"}
-	channels.FetchHttpResponseSizes(urls)
+	/*
+		channels.Test()
+		urls := []string{"https://example.com", "https://golang.org", "https://golang.org/doc"}
+		channels.FetchHttpResponseSizes(urls)
+	*/
+
+	fmt.Println(prose.JoinWithSeparator([]string{"apple", "orange", "pear", "banana"}, ","))
+	fmt.Println(prose.JoinWithSeparator([]string{"apple", "orange"}, ","))
 }
