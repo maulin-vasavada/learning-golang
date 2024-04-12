@@ -6,7 +6,7 @@ func HelloArrays() {
 	fmt.Println("arrays are awesome!")
 }
 
-func Print() {
+func PrintArray() {
 	notes := [7]string{"do", "re", "me", "fa", "so", "la", "ti"}
 
 	for index, note := range notes {
