@@ -1,6 +1,6 @@
 package main
 
-import "headfirst-go/interfaces"
+import "headfirst-go/channels"
 
 func main() {
 	/*
@@ -67,10 +67,16 @@ func main() {
 		fmt.Println(date.Day())
 	*/
 
-	var toy interfaces.NoiseMaker
-	toy = interfaces.Honk("Toyco Blaster")
-	toy.MakeSound()
-	toy = interfaces.Whistle("Toyco Camry")
-	toy.MakeSound()
-	interfaces.Play(toy)
+	/*
+		var toy interfaces.NoiseMaker
+		toy = interfaces.Honk("Toyco Blaster")
+		toy.MakeSound()
+		toy = interfaces.Whistle("Toyco Camry")
+		toy.MakeSound()
+		interfaces.Play(toy)
+	*/
+
+	channels.Test()
+	urls := []string{"https://example.com", "https://golang.org", "https://golang.org/doc"}
+	channels.FetchHttpResponseSizes(urls)
 }
