@@ -3,7 +3,9 @@ package prose
 import "strings"
 
 func JoinWithSeparator(phrases []string, separator string) string {
-	if len(phrases) == 1 {
+	if len(phrases) == 0 {
+		return ""
+	} else if len(phrases) == 1 {
 		return phrases[0]
 	} else if len(phrases) == 2 {
 		return phrases[0] + " and " + phrases[1]
