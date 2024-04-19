@@ -1,7 +1,7 @@
 package main
 
 import (
-	"gobyexamples/selecttest"
+	"gobyexamples/workerpool"
 )
 
 func main() {
@@ -30,5 +30,7 @@ func main() {
 	*/
 
 	//channels.PingPong()
-	selecttest.Select()
+	//selecttest.Select()
+
+	workerpool.Test()
 }
