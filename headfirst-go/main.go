@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"headfirst-go/prose"
-)
+import "headfirst-go/guessinggame"
 
 func main() {
 	/*
@@ -18,6 +15,7 @@ func main() {
 			log.Fatal(err)
 		}
 	*/
+	guessinggame.PlayGame()
 
 	/*
 		numbers := make([]float64, 0)
@@ -85,6 +83,8 @@ func main() {
 		channels.FetchHttpResponseSizes(urls)
 	*/
 
-	fmt.Println(prose.JoinWithSeparator([]string{"apple", "orange", "pear", "banana"}, ","))
-	fmt.Println(prose.JoinWithSeparator([]string{"apple", "orange"}, ","))
+	/*
+		fmt.Println(prose.JoinWithSeparator([]string{"apple", "orange", "pear", "banana"}, ","))
+		fmt.Println(prose.JoinWithSeparator([]string{"apple", "orange"}, ","))
+	*/
 }
