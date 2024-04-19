@@ -30,7 +30,12 @@ func main() {
 	*/
 
 	//channels.PingPong()
+	//channels.RangeOverChannel()
 	//selecttest.Select()
-
-	workerpool.Test()
+	//workerpool.Test()
+	//workerpool.WaitGroupTest()
+	workerpool.WaitGroupTest2()
+	//selecttest.SelectWithTimeout()
+	//timers.TimerTest()
+	//timers.TickerTest()
 }
