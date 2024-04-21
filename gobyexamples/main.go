@@ -1,6 +1,8 @@
 package main
 
-import "gobyexamples/concurrency"
+import (
+	"gobyexamples/misc"
+)
 
 func main() {
 	/*
@@ -42,7 +44,22 @@ func main() {
 		ratelimiter.BurstyLimiter()
 	*/
 
-	//concurrency.MutexTest()
-	//concurrency.AtomCounterTest()
-	concurrency.StatefulGoRoutineTest()
+	/*
+		concurrency.MutexTest()
+		concurrency.AtomCounterTest()
+		concurrency.StatefulGoRoutineTest()
+	*/
+
+	/*
+		sorting.SortBuiltInTest()
+		sorting.SortByFuncTest()
+	*/
+
+	/*
+		misc.PrintEnvVars()
+		misc.CmdLineArgs()
+	*/
+	misc.LogTest()
+
+	//web.StartHttpServer()
 }
