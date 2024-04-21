@@ -1,8 +1,6 @@
 package main
 
-import (
-	"gobyexamples/workerpool"
-)
+import "gobyexamples/concurrency"
 
 func main() {
 	/*
@@ -34,8 +32,17 @@ func main() {
 	//selecttest.Select()
 	//workerpool.Test()
 	//workerpool.WaitGroupTest()
-	workerpool.WaitGroupTest2()
+	//workerpool.WaitGroupTest2()
 	//selecttest.SelectWithTimeout()
 	//timers.TimerTest()
 	//timers.TickerTest()
+
+	/*
+		ratelimiter.SimpleLimiter()
+		ratelimiter.BurstyLimiter()
+	*/
+
+	//concurrency.MutexTest()
+	//concurrency.AtomCounterTest()
+	concurrency.StatefulGoRoutineTest()
 }
